@@ -1,0 +1,153 @@
+body {
+    font-family: Helvetica, sans-serif;
+    background-color: #2828bb;
+    margin: 0;
+    padding: 10px;
+}
+
+.container {
+    max-width: 500px;
+    margin: auto;
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+input, select, button {
+    width: 100%; /* Garante que todos os campos ocupem 100% da largura disponível */
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Foco nos campos */
+input:focus, select:focus {
+    border-color: #28a745;
+    outline: none;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+button:hover {
+    background-color: #218838;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    background-color: #1e7e34;
+}
+
+#resultado {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+    margin-top: 20px;
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Desabilitar a seleção do regime tributário quando o tipo não for PJ */
+#regimeTributario:disabled {
+    background-color: #f2f2f2;
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+        margin-top: 5%;
+    }
+
+    h1, h2 {
+        font-size: 24px;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    input, select, button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    #resultado {
+        font-size: 16px;
+        padding: 10px;
+    }
+}
+
+/* Estilo adicional para o select de Regime Tributário e Vale Refeição */
+#valeRefeicaoTipo,
+#valeRefeicaoValor,
+#regimeTributario {
+    margin-bottom: 20px;
+}
+
+/* Estilo para garantir que todos os campos de input e select tenham o mesmo tamanho */
+input, select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 12 12%22%3E%3Cpath d=%22M2 4l4 4 4-4%22/%3E%3C/svg%3E');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px;
+}
+
+/* Melhorar a exibição do select em dispositivos móveis */
+select:focus {
+    border-color: #28a745;
+}
+
+/* Borda diferenciada quando o campo de tipo de contratação PJ estiver selecionado */
+#regimeTributario {
+    border: 1px solid #ccc;
+}
+
+#regimeTributario option {
+    font-size: 16px;
+}
+
+/* Ajuste de largura para campos específicos */
+input#valor, input#valeRefeicaoValor {
+    width: 100%; /* Garante que os campos de valor tenham 100% da largura do contêiner */
+    box-sizing: border-box; /* Evita que o padding quebre o layout */
+}
+
+/* Ajuste no botão para garantir que tenha o mesmo estilo de largura */
+button {
+    width: 100%;
+    cursor: pointer;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+}

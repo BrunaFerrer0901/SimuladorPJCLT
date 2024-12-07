@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Propostas</title>
+    <link rel="stylesheet" href="styles.css">
+
+    
+    <img src="imagens/logo-academy.png" alt="Logo Academy" width="300px">
+</head>
+<body>
+    <div class="container">
+        <h1>Simulador de Propostas</h1>
+        <h2>CLT ou PJ</h2>
+        <form id="simuladorForm">
+            <label for="tipo">Tipo de Contratação:</label>
+            <select id="tipo" class="input-field" required>
+                <option value="selecione">Selecione</option>
+                <option value="clt1">CLT </option>
+                <option value="pj">PJ</option>
+            </select>
+            
+            <label for="valor">Valor Bruto:</label>
+            <input type="number" id="valor" class="input-field" required>
+
+            <label for="#tipoPorte">Tipo de Empresa (PJ):</label>
+            <select id="tipoPorte" class="input-field" disabled>
+                <option value="selecione">Selecione</option>
+                <option value="MEI1">MEI (Comércio ou indústria)</option>
+                <option value="MEI2">MEI (Prestação de serviços)</option>
+                <option value="MEI3">MEI (Comércio e serviços)</option>
+                <option value="MEEPP">ME / EPP</option>
+            </select>
+
+            <!-- Opção para escolher o regime tributário do PJ -->
+            <label for="regimeTributario">Regime Tributário (PJ):</label>
+            <select id="regimeTributario" class="input-field" required disabled>
+                <option value="selecione">Selecione</option>
+                <option value="simples">Simples Nacional</option>
+                <option value="lucroPresumido">Lucro Presumido</option>
+                <option value="lucroReal">Lucro Real</option>
+            </select>
+
+            <label for="valeRefeicaoTipo">Tipo de Cálculo Vale Refeição:</label>
+            <select id="valeRefeicaoTipo" class="input-field">
+                <option value="selecione">Selecione</option>
+                <option value="fixo">Valor Fixo</option>
+                <option value="percentual">Porcentagem</option>
+            </select>
+
+            <label for="valeRefeicaoValor">Valor do Vale Refeição (R$ ou %):</label>
+            <input type="number" id="valeRefeicaoValor" class="input-field" required>
+
+            <button type="submit" class="input-field">Calcular</button>
+        </form>
+        
+        <div id="resultado"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
